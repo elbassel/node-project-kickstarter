@@ -1,0 +1,22 @@
+{
+  "SUCCESS_MESSAGES" : {
+      "CREATED_SUCCESS" : {
+        "CODE" : "CREATED_SUCCESS",
+        "MSG" : "Object is created successfully"
+      },
+      "DELETED_SUCCESS" : {
+        "CODE" : "DELETED_SUCCESS",
+        "MSG" : "Object is deleted successfully"
+      },
+      "UPDATED_SUCCESS" : {
+        "CODE" : "UPDATED_SUCCESS",
+        "MSG" : "Object is deleted successfully"
+      }
+  },
+  "WARN_MESSAGES" : {
+
+  },
+  "ERROR_MESSAGES" : {
+
+  }
+}
