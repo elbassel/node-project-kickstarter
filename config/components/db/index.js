@@ -1,5 +1,7 @@
 'use strict'
 
+const logger = require('../logger');
+
 const dbConfig = require('./db');
 
 const joi = require('joi');
@@ -19,7 +21,7 @@ const dbConfigSchema = joi.object({
   "dbURL" : joi.string()
 });
 
-console.log(dbConfig.dbURL);
+
 
 const { error, value: envVars } = joi.validate(dbConfig, dbConfigSchema);
 
@@ -38,11 +40,15 @@ mongoose.connect(dbConfig.dbURL,{
 
 const mongooseConnection = mongoose.connection;
 
-mongooseConnection.on('error', console.error.bind(console, 'connection error:'));
+mongooseConnection.on('error', (err)=>{
+  console.error.bind(console, 'connection error:');
+  console.log(err);
+  throw new Error(`Database server is down`);
+});
 
 mongooseConnection.once('open', function() {
   // we're connected!
-  console.log("DB Server is running");
+  logger.info("DB Server is running");
 });
 
 exports.mongooseConnection = mongoose.connection;
