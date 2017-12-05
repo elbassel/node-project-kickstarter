@@ -6,8 +6,6 @@ const dbConfig = require('./db');
 
 const joi = require('joi');
 
-console.log(dbConfig);
-
 const dbConfigSchema = joi.object({
   "KICK_DB_NAME" :  joi.string()
     .required(),

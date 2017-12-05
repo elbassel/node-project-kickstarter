@@ -62,3 +62,8 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+// const MailUtil = require('./utils/MailUtils');
+// const configMail = require('./config').components.mail;
+// const CONSTANTS = require('./utils/constants');
+// MailUtil.sendEmail(configMail.SUPPORT.CONFIG, CONSTANTS.MAIL_TEMPLATES.SUPPORT, "Testing Mails", {"some" : "data"}, "elbassel.n13@gmail.com");
