@@ -8,7 +8,7 @@ require('dotenv').config({path: './config/.env'})
 require('./config');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./users/users_route');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-
+app.get('/status' , (req, res)=> res.send({status : "Up and running"}))
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
