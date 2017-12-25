@@ -9,8 +9,9 @@ It's already implemented, just tune what you need in the project and get started
 <span>
   All senstive information are excluded to be written in any file in the repository such as passwords, JWT key, etc.<br/>
   So, Dotenv package is used to handle it, create .env file under config folder and define it in the app file.
-  <br/><br/>
+  <br/>
   <code>require('dotenv').config({path: './config/.env'})</code>
+  In .env file:<br/>
   <code>
   KICK_DB_NAME=tempDB
     </code>
