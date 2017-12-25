@@ -54,3 +54,13 @@ SESSION_TIMEOUT=60<br/>
 </span>
 
 <br/>
+<h3>Database (MongoDB and Mongoose)</h3>
+<p>Mongoose is used as ODM.</p>
+<p>Provide DB environment variables in .env file</p>
+<code>
+KICK_DB_NAME=tempDB<br/>
+KICK_DB_PORT=27017<br/>
+KICK_DB_HOST=localhost<br/>
+</code>
+<p>You can have a look on users schema in users/users_schema.js</p>
+
