@@ -64,3 +64,20 @@ KICK_DB_HOST=localhost<br/>
 </code>
 <p>You can have a look on users schema in users/users_schema.js</p>
 
+<H3>Register or Signup</h3>
+<p>users_route have an end point to create a user: "post /users"</p>
+<p>Hash and salt is used to store passwords, passwords is not saved only salt and hash.</p>
+<p>salt and hash is creating for the document in "users_schema.js" by using mongoose hooks</p>
+
+<h3>Authentication</h3>
+<p>JASON WEB TOKEN and passport with local strategy</p>
+<p>Two environment variables are used to set session timeout in minutes and the key that is used to genreate jwt token</p>
+<code>
+  JWT_KEY=@ass!))98&&&?>*F*<br/>
+SESSION_TIMEOUT=60
+</code>
+<p>To start authenticating some end points, you can get reference of auth object as following:<br/>
+  <code>const auth = require('../config').components.auth;</code>
+  <br/>
+  And use it with any end points:<br/>
+  <code>router.get('/:id', auth, (req, res)=>{</code>
