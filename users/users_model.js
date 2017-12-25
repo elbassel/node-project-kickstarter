@@ -4,12 +4,14 @@ const UserModel = mongoose.model('users', userSchema);
 var Promise = require("bluebird");
 
 
-UserModel.insert = function(doctorObj){
+UserModel.insert = function(userObj){
   return new Promise(function(resolve,reject){
-    var newDoctor = new UserModel(doctorObj);
-      newDoctor.save(function(err,doctor){
+    var newDoctor = new UserModel(userObj);
+      newDoctor.save(function(err,userObjCreated){
         if(!err){
-          resolve(doctor);
+          delete userObjCreated.hash;
+          delete userObjCreated.salt;
+          resolve(userObjCreated);
         }else{
           reject(err);
         }
