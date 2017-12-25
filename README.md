@@ -12,13 +12,26 @@ It's already implemented, just tune what you need in the project and get started
   <br/><br/>
   <code>require('dotenv').config({path: './config/.env'})</code>
   <code>
-  KICK_DB_NAME=tempDB<br/>
-KICK_DB_PORT=27017<br/>
-KICK_DB_HOST=localhost<br/>
-LOG_KICK_STARTER_LEVEL=info<br/>
-MAIL_SUPPORT_PASSWORD=XXXXXX<br/>
-JWT_KEY=@ass!))98&&&?>*F*<br/>
+  KICK_DB_NAME=tempDB
+    </code>
+    <br/>
+<code>
+KICK_DB_PORT=27017
+  </code><br/>
+<code>
+KICK_DB_HOST=localhost
+ </code><br/>
+<code>
+LOG_KICK_STARTER_LEVEL=info
+  </code><br/>
+<code>
+MAIL_SUPPORT_PASSWORD=XXXXXX
+ </code>
+  <br/>
+<code>
+JWT_KEY=@ass!))98&&&?>*F*
+  </code><br/>
+<code>
 SESSION_TIMEOUT=60<br/>
-
-  </code>
+</code>
   </span>
