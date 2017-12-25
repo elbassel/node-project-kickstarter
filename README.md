@@ -82,6 +82,9 @@ SESSION_TIMEOUT=60
   And use it with any end points:<br/>
   <code>router.get('/:id', auth, (req, res)=>{</code>
 <br/>
+  To login:<br>
+  submit username and password to: post /login<br/>
+  The response will be json object contains jwt token and logged in user object.
 
 <h3>Email Notifications</h3>
 <p>Nodemailer is used to send emails.<br/>
