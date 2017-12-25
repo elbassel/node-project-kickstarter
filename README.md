@@ -81,3 +81,17 @@ SESSION_TIMEOUT=60
   <br/>
   And use it with any end points:<br/>
   <code>router.get('/:id', auth, (req, res)=>{</code>
+<br/>
+
+<h3>Email Notifications</h3>
+<p>Nodemailer is used to send emails.<br/>
+  You can define many emails as much you need, please config/components/mail/mail.js.<br /> You can add new one such as the support one.</p>
+<p>You have to add to the password as environment variables:<br /> <code>MAIL_SUPPORT_PASSWORD=XXXXXX</code></p>
+<p>Your templates will be under <strong>utils/mail-templates</strong></p>
+<p>To start using this copmonent:<br /> <code>
+ const MailUtil = require('./utils/MailUtils');<br />
+ const configMail = require('./config').components.mail;<br />
+ const CONSTANTS = require('./utils/constants');<br />
+ MailUtil.sendEmail(configMail.SUPPORT.CONFIG, CONSTANTS.MAIL_TEMPLATES.SUPPORT, "Testing Mails", {"some" : "data"}, "elbassel.n13@gmail.com");<br />
+
+  </code></p>
