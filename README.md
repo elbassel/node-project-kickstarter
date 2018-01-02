@@ -63,7 +63,7 @@ KICK_DB_PORT=27017<br/>
 KICK_DB_HOST=localhost<br/>
 </code>
 <p>You can have a look on users schema in users/users_schema.js</p>
-<h1>MVC Pattern</h1>
+<h3>MVC Pattern</h3>
 <p>MVC patter is applied, check users folder.</p>
 <H3>Register or Signup</h3>
 <p>users_route have an end point to create a user: "post /users"</p>
